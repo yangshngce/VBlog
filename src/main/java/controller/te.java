@@ -13,6 +13,6 @@ public class te {
     }
     @RequestMapping("index")
     public String qww() {
-        return "123";
+        return "index";
     }
 }
