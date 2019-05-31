@@ -11,7 +11,7 @@ public class te {
     public String index() {
         return "123";
     }
-    @RequestMapping("index")
+    @RequestMapping("11111")
     public String qww() {
         return "index";
     }
