@@ -1,3 +1,28 @@
+<?php
+// Free html5 templates : www.zerotheme.com
+
+$text = "<span style='color:red; font-size: 35px; line-height: 40px; magin: 10px;'>Error! Please try again.</span>";
+
+if(isset($_POST['name']))
+{
+	$name=$_POST['name'];
+	$email=$_POST['email'];
+	$message=$_POST['message'];
+
+	$to = "youremail@gmail.com";
+	$subject = "Zerotheme - Testing Contact Form";
+	$message = " Name: " . $name ."\r\n Email: " . $email . "\r\n Message:\r\n" . $message;
+	 
+	$from = "Zerotheme";
+	$headers = "From:" . $from . "\r\n";
+	$headers .= "Content-type: text/plain; charset=UTF-8" . "\r\n"; 
+	 
+	if(@mail($to,$subject,$message,$headers))
+	{
+	  $text = "<span style='color:blue; font-size: 35px; line-height: 40px; margin: 10px;'>Your Message was sent successfully !</span>";
+	}
+}
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -18,14 +43,14 @@
     
     <!-- CSS
   ================================================== -->
-  	<link rel="stylesheet" href="../css/zerogrid.css">
-	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" href="../css/menu.css">
+  	<link rel="stylesheet" href="css/zerogrid.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/menu.css">
 	<!-- Owl Carousel Assets -->
-	<link href="../css/owl.carousel.css" rel="stylesheet">
-    <link href="../css/owl.theme.css" rel="stylesheet">
+	<link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
 	<!-- Custom Fonts -->
-    <link href="../css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	
 	<!--[if lt IE 8]>
        <div style=' clear: both; text-align:center; position: relative;'>
@@ -35,8 +60,8 @@
       </div>
     <![endif]-->
     <!--[if lt IE 9]>
-		<script src="../js/html5.js"></script>
-		<script src="../js/css3-mediaqueries.js"></script>
+		<script src="js/html5.js"></script>
+		<script src="js/css3-mediaqueries.js"></script>
 	<![endif]-->
     
 </head>
@@ -48,7 +73,7 @@
 		<div class="wrap-header">
 			<div class="zerogrid">
 				<div class="row">
-					<a href="index.html" class="logo"><img src="../image/logo.png" /></a>
+					<a href="index.html" class="logo"><img src="images/logo.png" /></a>
 					<ul class="quick-link">
 						<li><a href="#" title="Upload Video"><i class="fa fa-upload"></i></a></li>
 						<li><a href="#" title="Log in"><i class="fa fa-user"></i></a></li>
@@ -91,204 +116,29 @@
 		<div class="wrap-container zerogrid">
 			<div class="row">
 				<div id="main-content" class="col-2-3">
-					<div class="wrap-vid">
-						<iframe width="100%" height="400" src="https://www.youtube.com/embed/IsPFDzAGb4A" frameborder="0" allowfullscreen></iframe>
-					</div>
-					<div class="row">
-						<div class="share">
-							<div class="col-1-4">
-								<div class="wrap-col">
-									<div class="box-share">
-										<a href="#">
-											<i class="fa fa-comments"></i>
-											<span>Comments</span>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-1-4">
-								<div class="wrap-col">
-									<div class="box-share">
-										<a href="#">
-											<i class="fa fa-twitter"></i>
-											<span>Twitter </span>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-1-4">
-								<div class="wrap-col">
-									<div class="box-share">
-										<a href="#">
-											<i class="fa fa-thumbs-up"></i>
-											<span>110</span>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-1-4">
-								<div class="wrap-col">
-									<div class="box-share">
-										<a href="#">
-											<i class="fa fa-plus"></i>
-											<span>Add</span>
-										</a>
-									</div>
-								</div>
-							</div>
+					<div class="contact">
+						<h2>Contact</h2>
+						<!--Warning-->
+						<center><?php echo $text;?></center>
+						<!---->
+						<div id="contact_form">
+							<form name="form1" id="ff" method="post" action="contact.php">
+								<label>
+								<span>Enter your name:</span>
+								<input type="text"  name="name" id="name" required>
+								</label>
+								<label>
+								<span>Enter your email:</span>
+								<input type="email"  name="email" id="email" required>
+								</label>
+								<label>
+								<span>Your message here:</span>
+								<textarea name="message" id="message"></textarea>
+								</label>
+								<center><input class="sendButton" type="submit" name="Submit" value="Submit"></center>
+							</form>
 						</div>
 					</div>
-					<h1 class="vid-name">Video's Name</h1>
-					<div class="info">
-						<h5>By <a href="#">Kelvin</a></h5>
-						<span><i class="fa fa-calendar"></i>25/3/2015</span> 
-						<span><i class="fa fa-heart"></i>1,200</span>
-					</div>
-					<p>Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. Pellentesque rutrum fringilla elementum. Curabitur tincidunt porta lorem vitae accumsan. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ac euismod turpis.</p>
-					<div class="tags">
-						<a href="#">Animal</a>
-						<a href="#">Aenean</a>
-						<a href="#">Feugiat</a>
-						<a href="#">Risus</a>
-						<a href="#">Magna</a>
-					</div>
-					<section class="vid-related">
-						<div class="header">
-							<h2>Related</h2>
-						</div>
-						<div class="row"><!--Start Box-->
-							<div id="owl-demo-1" class="owl-carousel">
-								<div class="item wrap-vid">
-									<div class="zoom-container">
-										<a href="single.html">
-											<span class="zoom-caption">
-												<i class="icon-play fa fa-play"></i>
-											</span>
-											<img src="../image/1.jpg" />
-										</a>
-									</div>
-									<h3 class="vid-name"><a href="#">Video's Name</a></h3>
-									<div class="info">
-										<h5>By <a href="#">Kelvin</a></h5>
-										<span><i class="fa fa-calendar"></i>25/3/2015</span> 
-										<span><i class="fa fa-heart"></i>1,200</span>
-									</div>
-								</div>
-								<div class="item wrap-vid">
-									<div class="zoom-container">
-										<a href="single.html">
-											<span class="zoom-caption">
-												<i class="icon-play fa fa-play"></i>
-											</span>
-											<img src="../image/2.jpg" />
-										</a>
-									</div>
-									<h3 class="vid-name"><a href="#">Video's Name</a></h3>
-									<div class="info">
-										<h5>By <a href="#">Kelvin</a></h5>
-										
-										<span><i class="fa fa-heart"></i>1,200</span>
-									</div>
-								</div>
-								<div class="item wrap-vid">
-									<div class="zoom-container">
-										<a href="single.html">
-											<span class="zoom-caption">
-												<i class="icon-play fa fa-play"></i>
-											</span>
-											<img src="../images/3.jpg" />
-										</a>
-									</div>
-									<h3 class="vid-name"><a href="#">Video's Name</a></h3>
-									<div class="info">
-										<h5>By <a href="#">Kelvin</a></h5>
-										<span><i class="fa fa-calendar"></i>25/3/2015</span> 
-										<span><i class="fa fa-heart"></i>1,200</span>
-									</div>
-								</div>
-								<div class="item wrap-vid">
-									<div class="zoom-container">
-										<a href="single.html">
-											<span class="zoom-caption">
-												<i class="icon-play fa fa-play"></i>
-											</span>
-											<img src="../image/4.jpg" />
-										</a>
-									</div>
-									<h3 class="vid-name"><a href="#">Video's Name</a></h3>
-									<div class="info">
-										<h5>By <a href="#">Kelvin</a></h5>
-										<span><i class="fa fa-calendar"></i>25/3/2015</span> 
-										<span><i class="fa fa-heart"></i>1,200</span>
-									</div>
-								</div>
-								<div class="item wrap-vid">
-									<div class="zoom-container">
-										<a href="single.html">
-											<span class="zoom-caption">
-												<i class="icon-play fa fa-play"></i>
-											</span>
-											<img src="../image/5.jpg" />
-										</a>
-									</div>
-									<h3 class="vid-name"><a href="#">Video's Name</a></h3>
-									<div class="info">
-										<h5>By <a href="#">Kelvin</a></h5>
-										<span><i class="fa fa-calendar"></i>25/3/2015</span> 
-										<span><i class="fa fa-heart"></i>1,200</span>
-									</div>
-								</div>
-								<div class="item wrap-vid">
-									<div class="zoom-container">
-										<a href="single.html">
-											<span class="zoom-caption">
-												<i class="icon-play fa fa-play"></i>
-											</span>
-											<img src="../image/14.jpg" />
-										</a>
-									</div>
-									<h3 class="vid-name"><a href="#">Video's Name</a></h3>
-									<div class="info">
-										<h5>By <a href="#">Kelvin</a></h5>
-										<span><i class="fa fa-calendar"></i>25/3/2015</span> 
-										<span><i class="fa fa-heart"></i>1,200</span>
-									</div>
-								</div>
-								<div class="item wrap-vid">
-									<div class="zoom-container">
-										<a href="single.html">
-											<span class="zoom-caption">
-												<i class="icon-play fa fa-play"></i>
-											</span>
-											<img src="../image/3.jpg" />
-										</a>
-									</div>
-									<h3 class="vid-name"><a href="#">Video's Name</a></h3>
-									<div class="info">
-										<h5>By <a href="#">Kelvin</a></h5>
-										<span><i class="fa fa-calendar"></i>25/3/2015</span> 
-										<span><i class="fa fa-heart"></i>1,200</span>
-									</div>
-								</div>
-								<div class="item wrap-vid">
-									<div class="zoom-container">
-										<a href="single.html">
-											<span class="zoom-caption">
-												<i class="icon-play fa fa-play"></i>
-											</span>
-											<img src="../image/5.jpg" />
-										</a>
-									</div>
-									<h3 class="vid-name"><a href="#">Video's Name</a></h3>
-									<div class="info">
-										<h5>By <a href="#">Kelvin</a></h5>
-										<span><i class="fa fa-calendar"></i>25/3/2015</span> 
-										<span><i class="fa fa-heart"></i>1,200</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
 				</div>
 				<div id="sidebar" class="col-1-3">
 					<form id="form-container" action="">
@@ -312,7 +162,7 @@
 										<span class="zoom-caption">
 											<i class="icon-play fa fa-play"></i>
 										</span>
-										<img src="../image/4.jpg" />
+										<img src="images/4.jpg" />
 									</a>
 								</div>
 								<div class="wrapper">
@@ -330,7 +180,7 @@
 										<span class="zoom-caption">
 											<i class="icon-play fa fa-play"></i>
 										</span>
-										<img src="../image/14.jpg" />
+										<img src="images/14.jpg" />
 									</a>
 								</div>
 								<div class="wrapper">
@@ -348,7 +198,7 @@
 										<span class="zoom-caption">
 											<i class="icon-play fa fa-play"></i>
 										</span>
-										<img src="../image/3.jpg" />
+										<img src="images/3.jpg" />
 									</a>
 								</div>
 								<div class="wrapper">
@@ -375,7 +225,7 @@
 											<span class="zoom-caption">
 												<i class="icon-play fa fa-play"></i>
 											</span>
-											<img src="../image/1.jpg" />
+											<img src="images/1.jpg" />
 										</a>
 									</div>
 									<h3 class="vid-name">Video's Name</h3>
@@ -393,7 +243,7 @@
 											<span class="zoom-caption">
 												<i class="icon-play fa fa-play"></i>
 											</span>
-											<img src="../image/2.jpg" />
+											<img src="images/2.jpg" />
 										</a>
 									</div>
 									<h3 class="vid-name">Video's Name</h3>
@@ -411,7 +261,7 @@
 											<span class="zoom-caption">
 												<i class="icon-play fa fa-play"></i>
 											</span>
-											<img src="../image/4.jpg" />
+											<img src="images/4.jpg" />
 										</a>
 									</div>
 									<h3 class="vid-name">Video's Name</h3>
@@ -434,19 +284,19 @@
 		<div class="zerogrid top-footer">
 			<div class="row">
 				<div class="col-1-5">
-					<a href="#"><img src="../image/15.jpg" /></a>
+					<a href="#"><img src="images/15.jpg" /></a>
 				</div>
 				<div class="col-1-5">
-					<a href="#"><img src="../image/16.jpg" /></a>
+					<a href="#"><img src="images/16.jpg" /></a>
 				</div>
 				<div class="col-1-5">
-					<a href="#"><img src="../image/17.jpg" /></a>
+					<a href="#"><img src="images/17.jpg" /></a>
 				</div>
 				<div class="col-1-5">
-					<a href="#"><img src="../image/18.jpg" /></a>
+					<a href="#"><img src="images/18.jpg" /></a>
 				</div>
 				<div class="col-1-5">
-					<a href="#"><img src="../image/19.jpg" /></a>
+					<a href="#"><img src="images/19.jpg" /></a>
 				</div>
 			</div>
 		</div>
@@ -454,7 +304,7 @@
 			<div class="row">
 				<div class="col-1-4 col-footer-1">
 					<div class="wrap-col">
-						<a href="index.html" class="logo"><img src="../image/logo.png" /></a>
+						<a href="index.html" class="logo"><img src="images/logo.png" /></a>
 						<p>Ut volutpat consectetur aliquam. Curabitur auctor in nis ulum ornare. Sed consequat, augue condimentum fermentum gravida, metus elit vehicula dui.</p>
 					</div>
 				</div>
@@ -486,30 +336,30 @@
 						<div class="row">
 							<div class="col-1-4">
 								<div class="wrap-col">
-									<a href="#"><img src="../image/6.jpg" /></a>
-									<a href="#"><img src="../image/10.jpg" /></a>
-									<a href="#"><img src="../image/13.jpg" /></a>
+									<a href="#"><img src="images/6.jpg" /></a>
+									<a href="#"><img src="images/10.jpg" /></a>
+									<a href="#"><img src="images/13.jpg" /></a>
 								</div>
 							</div>
 							<div class="col-1-4">
 								<div class="wrap-col">
-									<a href="#"><img src="../image/7.jpg" /></a>
-									<a href="#"><img src="../image/11.jpg" /></a>
-									<a href="#"><img src="../image/6.jpg" /></a>
+									<a href="#"><img src="images/7.jpg" /></a>
+									<a href="#"><img src="images/11.jpg" /></a>
+									<a href="#"><img src="images/6.jpg" /></a>
 								</div>
 							</div>
 							<div class="col-1-4">
 								<div class="wrap-col">
-									<a href="#"><img src="../image/8.jpg" /></a>
-									<a href="#"><img src="../image/12.jpg" /></a>
-									<a href="#"><img src="../image/10.jpg" /></a>
+									<a href="#"><img src="images/8.jpg" /></a>
+									<a href="#"><img src="images/12.jpg" /></a>
+									<a href="#"><img src="images/10.jpg" /></a>
 								</div>
 							</div>
 							<div class="col-1-4">
 								<div class="wrap-col">
-									<a href="#"><img src="../image/9.jpg" /></a>
-									<a href="#"><img src="../image/13.jpg" /></a>
-									<a href="#"><img src="../image/8.jpg" /></a>
+									<a href="#"><img src="images/9.jpg" /></a>
+									<a href="#"><img src="images/13.jpg" /></a>
+									<a href="#"><img src="images/8.jpg" /></a>
 								</div>
 							</div>
 						</div>
@@ -529,17 +379,17 @@
 	</footer>
 
 	<!-- Slider -->
-	<script src="../js/jquery-2.1.1.js"></script>
-	<script src="../js/demo.js"></script>
+	<script src="js/jquery-2.1.1.js"></script>
+	<script src="js/demo.js"></script>
 	<!-- Search -->
-	<script src="../js/modernizr.custom.js"></script>
-	<script src="../js/classie.js"></script>
-	<script src="../js/uisearch.js"></script>
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/uisearch.js"></script>
 	<script>
 		new UISearch( document.getElementById( 'sb-search' ) );
 	</script>
 	<!-- Carousel -->
-	<script src="../js/owl.carousel.js"></script>
+	<script src="js/owl.carousel.js"></script>
     <script>
     $(document).ready(function() {
 
