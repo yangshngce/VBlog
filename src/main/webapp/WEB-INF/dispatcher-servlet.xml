@@ -46,6 +46,10 @@
         <property name="contentType" value="text/html;charset=UTF-8"></property>
     </bean>
 
+    <!-- 支持上传文件 -->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+
     <!-- 自动扫描装配 -->
     <context:component-scan base-package="controller"/>
 </beans>
