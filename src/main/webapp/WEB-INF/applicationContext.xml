@@ -12,7 +12,7 @@
         <property name="dataSource" ref="datasouce"></property>
     </bean>
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value=""></property>
-        <property name="sqlSessionFactoryBeanName" ref="factory"></property>
+        <property name="basePackage" value="Mapper.xml"></property>
+        <property name="sqlSessionFactoryBeanName" value="factory"></property>
     </bean>
 </beans>
