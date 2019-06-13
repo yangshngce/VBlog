@@ -5,6 +5,5 @@ import  pojo.Users;
 import  org.apache.ibatis.annotations.Insert;
 
 public interface register {
-    @Insert("insert   ")
-    List<Users> insertAll();
+    public Integer insertUser(Users users);
 }
