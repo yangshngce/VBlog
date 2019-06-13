@@ -5,5 +5,7 @@ import  pojo.Users;
 import  org.apache.ibatis.annotations.Insert;
 
 public interface register {
-    public Integer insertUser(Users users);
+    public void insertUser(Users users);
+    public void update(Users users);
+    public void delete(Users users);
 }

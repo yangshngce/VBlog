@@ -1,0 +1,8 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.register">
+    <insert id="dao.register" parameterType="pojo.Users">
+        insert into user(user_name,password,sex,age,creat_time,soccer,user_type,email)
+        values(#{name}, #{password}, #{sex}, #{age}, #{data},#{soccer},#{usertype},#{email})
+    </insert>
+
+</mapper>
