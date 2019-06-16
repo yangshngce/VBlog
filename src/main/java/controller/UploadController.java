@@ -13,7 +13,7 @@ import tool.Upload;
 
 @Controller
 public class UploadController {
-    @RequestMapping(value = "/upload")
+    @RequestMapping("/upload")
     @ResponseBody
     public ModelAndView upload(@RequestParam(value = "file", required = false) MultipartFile multipartFile, HttpServletRequest request, ModelMap map ) {
             String message = "";
