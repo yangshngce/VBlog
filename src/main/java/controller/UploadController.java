@@ -1,5 +1,6 @@
 package controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import model.FileEntity;
 import tool.Upload;
 
+@Controller
 public class UploadController {
     @RequestMapping(value = "/upload")
     @ResponseBody
@@ -21,7 +23,7 @@ public class UploadController {
         try {
             entity = fileUploadTool.createFile(multipartFile, request);
             if(entity != null){
-                service.saveFile(entity);
+                //service.saveFile(entity);
                 message = "上传成功";
                 map.put("entity", entity);
                 map.put("result", message);

@@ -160,11 +160,11 @@ public class Upload {
      * @param fileName
      * @return
      */
-    private boolean checkMediaType(String fileEnd) {
+    private boolean checkMediaType(String fileName) {
         Iterator<String> type = Arrays.asList(allowFLV).iterator();
         while (type.hasNext()) {
             String ext = type.next();
-            if (fileEnd.equals(ext)) {
+            if (fileName.equals(ext)) {
                 return true;
             }
         }
@@ -178,11 +178,11 @@ public class Upload {
      * @param fileName
      * @return
      */
-    private boolean checkAVIType(String fileEnd) {
+    private boolean checkAVIType(String fileName) {
         Iterator<String> type = Arrays.asList(allowAVI).iterator();
         while (type.hasNext()) {
             String ext = type.next();
-            if (fileEnd.equals(ext)) {
+            if (fileName.equals(ext)) {
                 return true;
             }
         }
