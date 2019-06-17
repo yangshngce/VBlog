@@ -53,7 +53,7 @@ public class Upload {
             System.out.println("文件为空");
         }
         if (bflag) {
-            String logoPathDir = "/video/";
+            String logoPathDir = "WEB-INF/statics/videos";
             String logoRealPathDir = request.getServletContext().getRealPath(logoPathDir);
 // 上传到本地磁盘
 // String logoRealPathDir = "E:/upload";
@@ -96,7 +96,7 @@ public class Upload {
 // 设置转换为AVI格式后文件的保存路径
                 String codcAviPath = logoRealPathDir + File.separator + newFileName + ".avi";
 // 获取配置的转换工具（mencoder.exe）的存放路径
-                String mencoderPath = request.getServletContext().getRealPath("/tools/mencoder.exe");
+                String mencoderPath = request.getServletContext().getRealPath("src/main/other/mencoder.exe");
                 aviPath = transfMediaTool.processAVI(mencoderPath, filedirs.getAbsolutePath(), codcAviPath);
                 fileEnd = this.getFileExt(codcAviPath);
             }
@@ -107,7 +107,7 @@ public class Upload {
 // 设置转换为flv格式后文件的保存路径
                         String codcFilePath = logoRealPathDir + File.separator + newFileName + ".flv";
 // 获取配置的转换工具（ffmpeg.exe）的存放路径
-                        String ffmpegPath = request.getServletContext().getRealPath("/tools/ffmpeg.exe");
+                        String ffmpegPath = request.getServletContext().getRealPath("src/main/other/ffmpeg.exe");
                         transfMediaTool.processFLV(ffmpegPath, aviPath, codcFilePath);
                         fileDir = logoPathDir + newFileName + ".flv";
                         builder = new StringBuilder(fileDir);

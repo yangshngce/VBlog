@@ -69,7 +69,7 @@ public class TransfMediaTool {
      *            转码工具的存放路径
      * @param upFilePath
      *            用于指定要转换格式的文件,要截图的视频源文件
-     * @param codcFilePath
+     * @param codcAviPath
      *            格式转换后的的文件保存路径
      * @return
      * @throws Exception
