@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Bokee" />
         <module name="VBlog" />
+        <module name="WorkSpaceForVBlog" />
       </profile>
     </annotationProcessing>
   </component>
