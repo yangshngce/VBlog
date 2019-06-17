@@ -10,10 +10,10 @@ import java.util.Map;
 
 @Controller
 public class registerController {
-    //@Autowired
+    /*@Autowired
     private registerService registerService;
     @RequestMapping("/addUser")
     public Map<String,Object> adduser(Users users){
         return registerService.adduser(users);
-    }
+    }*/
 }

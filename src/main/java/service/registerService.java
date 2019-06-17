@@ -10,11 +10,11 @@ import java.util.HashMap;
 import java.util.Map;
 @Service
 public class registerService {
-    @Autowired
+    /*@Autowired
     private register registers;
     public Map<String,Object> adduser(Users users) {
         Map<String, Object> maps=new HashMap<String,Object>();
         maps.put("data",users);
         return maps;
-    }
+    }*/
 }
