@@ -18,6 +18,7 @@
     <mvc:resources mapping="/js/**" location="/WEB-INF/statics/js/"/>
     <mvc:resources mapping="/image/**" location="/WEB-INF/statics/image/"/>
     <mvc:resources mapping="/views/**" location="/WEB-INF/views/"/>
+    <mvc:resources mapping="/yuyy_html_test/**" location="/WEB-INF/statics/yuyy_html_test/"/>
     <!--<mvc:resources mapping="/font/**" location="/WEB-INF/statics/font/"/>-->
     <!--<mvc:resources mapping="/font-awesome/**" location="/WEB-INF/statics/font-awesome/"/>-->
     <mvc:default-servlet-handler/>
@@ -53,5 +54,7 @@
     <!-- 自动扫描装配 -->
     <context:component-scan base-package="controller"/>
     <context:component-scan base-package="service"/>
+    <context:component-scan base-package="service.impl"/>
     <context:component-scan base-package="dao"/>
+    <context:component-scan base-package="po"/>
 </beans>

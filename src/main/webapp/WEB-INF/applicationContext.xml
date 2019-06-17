@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="datasouce" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-        <property name="url" value="jdbc:mysql://localhost:3306/bokee"></property>
-        <property name="username" value="tripmode"></property>
+        <property name="url" value="jdbc:mysql://106.15.225.159:3306/vblog"></property>
+        <property name="username" value="vblog"></property>
         <property name="password" value="123456"></property>
     </bean>
     <bean id="factory" class="org.mybatis.spring.SqlSessionFactoryBean">

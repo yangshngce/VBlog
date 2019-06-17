@@ -4,6 +4,14 @@ public class LoginForm {
     private String username;
     private String password;
 
+    public LoginForm() {
+    }
+
+    public LoginForm(String username) {
+        this.username = username;
+        this.password = null;
+    }
+
     public String getUsername() {
         return username;
     }

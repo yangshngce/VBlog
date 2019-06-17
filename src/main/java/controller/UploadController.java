@@ -9,7 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import model.FileEntity;
-import tool.Upload;
+import common.Upload;
 
 @Controller
 public class UploadController {

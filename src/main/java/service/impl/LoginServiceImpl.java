@@ -22,7 +22,7 @@ public class LoginServiceImpl implements LoginService {
         if (userPo==null){
             return 3;
         }else {
-            if (userPo.getPASSWORD().equals(loginForm.getPassword())){
+            if (userPo.getUSR_PWD().equals(loginForm.getPassword())){
                 return 1;
             }
             return 2;

@@ -1,4 +1,4 @@
-package tool;
+package common;
 
 import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletRequest;
