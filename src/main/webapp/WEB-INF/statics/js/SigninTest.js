@@ -25,33 +25,42 @@ $(function(){
 
     //验证输入事件处理
     $("#UserName")[0].oninput = function(){
-        validateFormInput($("#UserName"),/^[a-zA-Z]\w{5,11}$/);
+        validateFormInput($("UserName"),/^\w{2,30}$/);
     }
     $("#PassWord")[0].oninput = function(){
-        validateFormInput($("#PassWord"),/^[a-zA-Z]\w{5,11}$/);
+        validateFormInput($("#PassWord"),/^\w{2,30}$/);
     }
 
-    $("#bt").click(function(){
-        var username = $("#UserName").prop("value");
+    $("#denglu").click(function(){
+        console.log("00")
+        //var username = $("UserName").prop("value");
+        var username = "123456";
         var password = $("#PassWord").prop("value");
-        var data={username:username, password:password};
-        var url="http://localhost:8080/login";
 
-        var b1 = validateFormInput($("#UserName"),/^[a-zA-Z]\w{5,11}$/);
-        var b2 = validateFormInput($("#PassWord"),/^[a-zA-Z]\w{5,11}$/);
+        var data={username:username, password:password};
+        var url="http://localhost:8080/VBlog_war/usr";
+
+        var b1 = validateFormInput($("UserName"),/^\w{2,30}$/);
+        var b2 = validateFormInput($("#PassWord"),/^\w{2,30}$/);
 
         if(b1 && b2){
-            $("#bt").myAjaxGet(url,data,function(da){
-                if (data.code == "1001") { //判断返回值，这里根据的业务内容可做调整
-                    setTimeout(function () {//做延时以便显示登录状态值
-                        showMsg("正在登录中...");
+            $("#denglu").myAjaxGet(url,data,function(da){
+                console.log(da);
+                if (da.code == "1001") { //判断返回值，这里根据的业务内容可做调整
+                        alert(da.message);
                         console.log(data);
                         window.location.href =  url;//登录后的页面地址
-                    },100)
-                } else if (data.code == "1002"){
-                    showMsg(data.message);//显示登录失败的原因
+                } else if (da.code == "1002"){
+                    alert(da.message);
+                    return false;
+                }else if (da.code == "1003"){
+                    alert(da.message);
+                    return false;
+                }else if (da.code == "1004"){
+                    alert(da.message);
                     return false;
                 }
+
             });
         }
     });

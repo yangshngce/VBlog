@@ -14,20 +14,28 @@
 
     <!--静态资源映射-->
     <!--本项目把静态资源放在了webapp的statics目录下，资源映射如下-->
-    <mvc:resources mapping="/css/**" location="/WEB-INF/statics/css/"/>
+    <mvc:resources mapping="/css/**" location="WEB-INF/statics/css/"/>
+    <mvc:resources mapping="/css01/**" location="WEB-INF/statics/css01/"/>
     <mvc:resources mapping="/js/**" location="/WEB-INF/statics/js/"/>
-    <mvc:resources mapping="/image/**" location="/WEB-INF/statics/image/"/>
+    <mvc:resources mapping="/js01/**" location="/WEB-INF/statics/js01/"/>
+    <mvc:resources mapping="/font-awesome/**" location="/WEB-INF/statics/font-awesome/"/>
+    <mvc:resources mapping="/font-awesome/css/**" location="/WEB-INF/statics/font-awesome/css/"/>
+    <mvc:resources mapping="/images/**" location="/WEB-INF/statics/images/"/>
+    <mvc:resources mapping="/images01/**" location="/WEB-INF/statics/images01/"/>
     <mvc:resources mapping="/views/**" location="/WEB-INF/views/"/>
+    <mvc:resources mapping="/yuyy_html_test/**" location="/WEB-INF/statics/yuyy_html_test/"/>
+    <mvc:resources mapping="/statics/**" location="/WEB-INF/statics/"/>
+
     <!--<mvc:resources mapping="/font/**" location="/WEB-INF/statics/font/"/>-->
     <!--<mvc:resources mapping="/font-awesome/**" location="/WEB-INF/statics/font-awesome/"/>-->
     <mvc:default-servlet-handler/>
     <!-- 对模型视图名称的解析，即在模型视图名称添加前后缀(如果最后一个还是表示文件夹,则最后的斜杠不要漏了) 使用JSP-->
     <!-- 默认的视图解析器 在上边的解析错误时使用 (默认使用html)- -->
     <!--<bean id="defaultViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
-        <!--<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>-->
-        <!--<property name="prefix" value="/WEB-INF/views/"/>&lt;!&ndash;设置JSP文件的目录位置&ndash;&gt;-->
-        <!--<property name="suffix" value=".html"/>-->
-        <!--<property name="exposeContextBeansAsAttributes" value="true"/>-->
+    <!--<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>-->
+    <!--<property name="prefix" value="/WEB-INF/views/"/>&lt;!&ndash;设置JSP文件的目录位置&ndash;&gt;-->
+    <!--<property name="suffix" value=".html"/>-->
+    <!--<property name="exposeContextBeansAsAttributes" value="true"/>-->
     <!--</bean>-->
     <bean id="freemarkerConfiguration"
           class="org.springframework.beans.factory.config.PropertiesFactoryBean">
@@ -53,5 +61,7 @@
     <!-- 自动扫描装配 -->
     <context:component-scan base-package="controller"/>
     <context:component-scan base-package="service"/>
+    <context:component-scan base-package="service.impl"/>
     <context:component-scan base-package="dao"/>
+    <context:component-scan base-package="po"/>
 </beans>

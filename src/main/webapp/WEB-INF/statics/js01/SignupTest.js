@@ -32,7 +32,7 @@ $(function(){
         validateFormInput($("#PassWord"),/^[a-zA-Z]\w{5,11}$/);
     }
 
-    $("#zhuce").click(function(){
+    $("#bt").click(function(){
         var username = $("#UserName").prop("value");
         var password = $("#PassWord").prop("value");
         var data={username:username, password:password};
