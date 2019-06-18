@@ -6,4 +6,5 @@ import web.RegisterForm;
 public interface UsrService {
     Integer loginJudge(LoginForm loginForm);
     Integer register(RegisterForm registerForm);
+    String getUsrNameById(Integer usrId);
 }

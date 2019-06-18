@@ -39,16 +39,7 @@ public class UsrController {
         }
     }
 
-    @RequestMapping(value = "/sessionTest")
-    @ResponseBody
-    public String sessionTest(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
-        System.out.println("session测试");
-        if (httpServletRequest.getSession().getAttribute("loginUsr")!=null){
-            return httpServletRequest.getSession().getAttribute("loginUsr").toString();
-        }else {
-            return "00000";
-        }
-    }
+
 
     @RequestMapping(value = "/usr",method = RequestMethod.POST)
     @ResponseBody

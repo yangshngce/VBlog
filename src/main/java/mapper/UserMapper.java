@@ -19,4 +19,7 @@ public interface UserMapper {
 
     @Update("update user set PASSWORD = '${PASSWORD}' where NAME = '${NAME}'")
     Integer update(UserPo userPo);
+
+    @Select("select USR_NAME from usr where USR_ID = #{usrId}")
+    String getUsrNameById(@Param("usrId") Integer usrId);
 }

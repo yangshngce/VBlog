@@ -64,4 +64,5 @@
     <context:component-scan base-package="service.impl"/>
     <context:component-scan base-package="dao"/>
     <context:component-scan base-package="po"/>
+    <context:component-scan base-package="bo"/>
 </beans>
