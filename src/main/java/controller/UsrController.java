@@ -47,7 +47,7 @@ public class UsrController {
             case 2:
                 return new Result(true,"2002","注册失败，用户已存在",null);
             default:
-                return new Result(false,1004+"","查询失败",null);
+                return new Result(false,"2003","查询失败",null);
         }
     }
 }

@@ -27,11 +27,19 @@ background-attachment: fixed;" >
 	<div class="login-top">
 		<h1>用户登录</h1>
 		<form>
-			<input type="text" id="UserName" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Id';}">
-			<input type="password" id="PassWord" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}">
+			<table>
+				<tr>
+					<td><input type="text" id="UserName" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Id';}"></td>
+				</tr>
+				<tr>
+					<td><input type="password" id="PassWord" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}"></td>
+				</tr>
+			</table>
+
+
 	    </form>
 	    <div class="forgot">
-	    	<input id="denglu" type="submit" value="登录"  >//onclick="window.location.href='index2.html'"
+	    	<input id="denglu" type="submit" value="登录"  >
 	    </div>
 	</div>
 	<div class="login-bottom">
