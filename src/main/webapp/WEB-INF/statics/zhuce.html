@@ -12,6 +12,8 @@
 <!--Google Fonts-->
 <link href='http://fonts.useso.com/css?family=Roboto:500,900italic,900,400italic,100,700italic,300,700,500italic,100italic,300italic,400' rel='stylesheet' type='text/css'>
 <link href='http://fonts.useso.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="../js/jquery-2.1.1.js" ></script>
+	<script type="text/javascript" src="../js/SignupTest.js" ></script>
 <!--Google Fonts-->
 </head>
 
@@ -25,11 +27,26 @@ background-attachment: fixed;" >
 	<div class="login-top">
 		<h1>用户注册</h1>
 		<form>
-			<input type="text" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}">
-			<input type="password" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}">
+			<table>
+				<tr>
+					<td><input type="text" id="UserName" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}"></td>
+				</tr>
+				<tr>
+					<td><input type="password" id="PassWord" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}"></td>
+				</tr>
+				<tr>
+					<td><input type="text" id="Sex" value="性别" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '性别';}"></td>
+				</tr>
+				<tr>
+					<td><input type="text" id="Age" value="年龄" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '年龄';}"></td>
+				</tr>
+				<tr>
+					<td><input type="text" id="Email" value="邮箱" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '邮箱';}"></td>
+				</tr>
+			</table>
 	    </form>
 	    <div class="forgot">
-	    	<center><input type="submit" value="确定" align="center" ></center>
+	    	<center><input id="zhuce" type="submit" value="确定" align="center" ></center>
 	    </div>
 	</div>
 	<div class="login-bottom">

@@ -25,7 +25,7 @@ $(function(){
 
     //验证输入事件处理
     $("#UserName")[0].oninput = function(){
-        validateFormInput($("UserName"),/^\w{2,30}$/);
+        validateFormInput($("#UserName"),/^\w{2,30}$/);
     }
     $("#PassWord")[0].oninput = function(){
         validateFormInput($("#PassWord"),/^\w{2,30}$/);

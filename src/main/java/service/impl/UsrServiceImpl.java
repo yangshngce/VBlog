@@ -63,4 +63,9 @@ public class UsrServiceImpl implements UsrService {
 
     }
 
+    @Override
+    public String getUsrNameById(Integer usrId){
+        return userMapper.getUsrNameById(usrId);
+    }
+
 }

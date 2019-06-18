@@ -1,133 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <beans xmlns="http://www.springframework.org/schema/beans"
-
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-
        xmlns:context="http://www.springframework.org/schema/context"
-
        xmlns:mvc="http://www.springframework.org/schema/mvc"
-
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-
     <!--此文件负责整个mvc中的配置-->
 
-
-
     <!--启用spring的一些annotation -->
-
     <context:annotation-config/>
 
-
-
     <!-- 配置注解驱动 可以将request参数与绑定到controller参数上 -->
-
     <mvc:annotation-driven/>
 
-
-
     <!--静态资源映射-->
-
     <!--本项目把静态资源放在了webapp的statics目录下，资源映射如下-->
-
     <mvc:resources mapping="/css/**" location="WEB-INF/statics/css/"/>
-
     <mvc:resources mapping="/css01/**" location="WEB-INF/statics/css01/"/>
-
     <mvc:resources mapping="/js/**" location="/WEB-INF/statics/js/"/>
-
     <mvc:resources mapping="/js01/**" location="/WEB-INF/statics/js01/"/>
-
     <mvc:resources mapping="/font-awesome/**" location="/WEB-INF/statics/font-awesome/"/>
-
     <mvc:resources mapping="/font-awesome/css/**" location="/WEB-INF/statics/font-awesome/css/"/>
-
     <mvc:resources mapping="/images/**" location="/WEB-INF/statics/images/"/>
-
     <mvc:resources mapping="/images01/**" location="/WEB-INF/statics/images01/"/>
-
     <mvc:resources mapping="/views/**" location="/WEB-INF/views/"/>
-
     <mvc:resources mapping="/yuyy_html_test/**" location="/WEB-INF/statics/yuyy_html_test/"/>
-
     <mvc:resources mapping="/statics/**" location="/WEB-INF/statics/"/>
 
-
-
     <!--<mvc:resources mapping="/font/**" location="/WEB-INF/statics/font/"/>-->
-
     <!--<mvc:resources mapping="/font-awesome/**" location="/WEB-INF/statics/font-awesome/"/>-->
-
     <mvc:default-servlet-handler/>
-
     <!-- 对模型视图名称的解析，即在模型视图名称添加前后缀(如果最后一个还是表示文件夹,则最后的斜杠不要漏了) 使用JSP-->
-
     <!-- 默认的视图解析器 在上边的解析错误时使用 (默认使用html)- -->
-
     <!--<bean id="defaultViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
-
     <!--<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>-->
-
     <!--<property name="prefix" value="/WEB-INF/views/"/>&lt;!&ndash;设置JSP文件的目录位置&ndash;&gt;-->
-
     <!--<property name="suffix" value=".html"/>-->
-
     <!--<property name="exposeContextBeansAsAttributes" value="true"/>-->
-
     <!--</bean>-->
-
     <bean id="freemarkerConfiguration"
-
           class="org.springframework.beans.factory.config.PropertiesFactoryBean">
-
         <property name="location" value="classpath:freemarker.properties" />
-
     </bean>
-
     <!-- html视图解析器 必须先配置freemarkerConfig,注意html是没有prefix前缀属性的 -->
-
     <bean id="freemarkerConfig"
-
           class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
-
         <property name="freemarkerSettings" ref="freemarkerConfiguration" />
-
         <property name="templateLoaderPath" value="WEB-INF/views"/>
-
     </bean>
-
     <bean id="htmlviewResolver"
-
           class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
-
         <property name="suffix" value=".html" />
-
         <property name="order" value="0"></property>
-
         <property name="contentType" value="text/html;charset=UTF-8"></property>
-
     </bean>
-
-
 
     <!-- 支持上传文件 -->
-
     <bean id="multipartResolver"
-
           class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
 
-
-
     <!-- 自动扫描装配 -->
-
     <context:component-scan base-package="controller"/>
-
     <context:component-scan base-package="service"/>
-
     <context:component-scan base-package="service.impl"/>
-
     <context:component-scan base-package="dao"/>
-
     <context:component-scan base-package="po"/>
-
+    <context:component-scan base-package="bo"/>
 </beans>

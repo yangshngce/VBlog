@@ -34,7 +34,12 @@ public class VideoServiceImpl implements VideoService {
 
     @Override
     public List<VideoPo> downLoadVideo(Integer usrId) {
-        List<VideoPo> videoPoList=videoMapper.selOnesAll(usrId);
-        return videoPoList;
+        return videoMapper.selOnesAll(usrId);
     }
+
+    @Override
+    public List<VideoPo> getVideoByType(String type) {
+        return videoMapper.getVideoByType(type);
+    }
+
 }
