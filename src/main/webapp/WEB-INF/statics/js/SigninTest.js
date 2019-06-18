@@ -33,14 +33,13 @@ $(function(){
 
     $("#denglu").click(function(){
         console.log("00")
-        //var username = $("UserName").prop("value");
-        var username = "123456";
+        var username = $("#UserName").prop("value");
         var password = $("#PassWord").prop("value");
 
         var data={username:username, password:password};
         var url="http://localhost:8080/VBlog_war/usr";
 
-        var b1 = validateFormInput($("UserName"),/^\w{2,30}$/);
+        var b1 = validateFormInput($("#UserName"),/^\w{2,30}$/);
         var b2 = validateFormInput($("#PassWord"),/^\w{2,30}$/);
 
         if(b1 && b2){
