@@ -10,6 +10,9 @@ import service.UsrService;
 import web.LoginForm;
 import web.RegisterForm;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 @Controller
 public class UsrController {
 
@@ -18,12 +21,14 @@ public class UsrController {
 
     @RequestMapping(value = "/usr",method = RequestMethod.GET)
     @ResponseBody
-    public Result login(LoginForm loginForm){
+    public Result login(LoginForm loginForm, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse){
         System.out.println("接收到前端发来的信息");
         System.out.println(loginForm);
+
         Integer temp=usrService.loginJudge(loginForm);
         switch(temp){
             case 1:
+                httpServletRequest.getSession().setAttribute("loginUsr",loginForm);
                 return new Result(true,1001+"","密码正确，登陆成功",null);
             case 2:
                 return new Result(true,1002+"","密码错误，登陆失败",null);
@@ -31,6 +36,17 @@ public class UsrController {
                 return new Result(true,1003+"","用户名错误",null);
             default:
                 return new Result(false,1004+"","查询失败",null);
+        }
+    }
+
+    @RequestMapping(value = "/sessionTest")
+    @ResponseBody
+    public String sessionTest(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
+        System.out.println("session测试");
+        if (httpServletRequest.getSession().getAttribute("loginUsr")!=null){
+            return httpServletRequest.getSession().getAttribute("loginUsr").toString();
+        }else {
+            return "00000";
         }
     }
 
