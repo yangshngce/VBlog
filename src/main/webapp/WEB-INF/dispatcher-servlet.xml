@@ -27,6 +27,7 @@
     <mvc:resources mapping="/statics/**" location="/WEB-INF/statics/"/>
     <mvc:resources mapping="/views/js/**" location="/WEB-INF/statics/views/js/"/>
 
+
     <!--<mvc:resources mapping="/font/**" location="/WEB-INF/statics/font/"/>-->
     <!--<mvc:resources mapping="/font-awesome/**" location="/WEB-INF/statics/font-awesome/"/>-->
     <mvc:default-servlet-handler/>

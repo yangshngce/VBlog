@@ -25,11 +25,11 @@ img{max-width:100%;}
 /*end reset*/
 /*--login start here--*/
 body{
-   background: url(../images/login_bg.jpg)repeat;
-   padding:100px 0px 30px 0px;
-   font-family: 'Roboto', sans-serif;
-   font-size: 100%;
-   　background-size: 100%;
+  background: url(../images/login_bg.jpg)repeat;
+  padding:100px 0px 30px 0px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+  　background-size: 100%;
 }
 .login {
   width: 32%;
@@ -87,8 +87,8 @@ body{
   color: #fff;
 }
 .login-bottom h3 a:hover {
-	color:#696969;
-	transition: 0.5s all;
+  color:#696969;
+  transition: 0.5s all;
   -webkit-transition: 0.5s all;
   -moz-transition: 0.5s all;
   -o-transition: 0.5s all;
@@ -108,8 +108,8 @@ body{
   color: #E15748;
 }
 .copyright p a:hover{
-	color: #fff;
-	 transition: 0.5s all;
+  color: #fff;
+  transition: 0.5s all;
   -webkit-transition: 0.5s all;
   -moz-transition: 0.5s all;
   -o-transition: 0.5s all;
@@ -117,114 +117,114 @@ body{
 /*--login end here--*/
 /*--meadia quiries start here--*/
 @media(max-width:1440px){
-.login {
-  width: 35%;
-}
+  .login {
+    width: 35%;
+  }
 }
 @media(max-width:1366px){
-.login {
-  width: 37%;
-}
+  .login {
+    width: 37%;
+  }
 }
 @media(max-width:1280px){
-.login {
-  width: 40%;
-}
+  .login {
+    width: 40%;
+  }
 }
 @media(max-width:1024px){
-.login {
-  width: 48%;
-}
-.copyright {
-  padding: 100px 0px 0px 0px;
-}
+  .login {
+    width: 48%;
+  }
+  .copyright {
+    padding: 100px 0px 0px 0px;
+  }
 }
 @media(max-width:768px){
-.login {
-  width: 65%;
-}
-.login-top h1 {
-  font-size: 25px;
-}
-.login-bottom h3 a {
-  font-size: 22px;
-}
-.copyright {
-  padding: 250px 0px 0px 0px;
-}
-body {
-  padding: 100px 0px 0px 0px;
-}
-.login h2 {
-  font-size: 28px;
-}
+  .login {
+    width: 65%;
+  }
+  .login-top h1 {
+    font-size: 25px;
+  }
+  .login-bottom h3 a {
+    font-size: 22px;
+  }
+  .copyright {
+    padding: 250px 0px 0px 0px;
+  }
+  body {
+    padding: 100px 0px 0px 0px;
+  }
+  .login h2 {
+    font-size: 28px;
+  }
 }
 @media(max-width:640px){
-.login-top h1 {
-  font-size: 23px;
-}
+  .login-top h1 {
+    font-size: 23px;
+  }
 
-.login-bottom h3 a {
-  font-size: 19px;
-}
-.login-bottom h3 {
-  font-size: 13px;
-}
-.copyright {
-  padding: 110px 0px 0px 0px;
-}
-body {
-  padding: 110px 0px 0px 0px;
-}
+  .login-bottom h3 a {
+    font-size: 19px;
+  }
+  .login-bottom h3 {
+    font-size: 13px;
+  }
+  .copyright {
+    padding: 110px 0px 0px 0px;
+  }
+  body {
+    padding: 110px 0px 0px 0px;
+  }
 }
 @media(max-width:480px){
-.login {
-  width: 80%;
-}
-.login-top h1 {
-  font-size: 21px;
-}
+  .login {
+    width: 80%;
+  }
+  .login-top h1 {
+    font-size: 21px;
+  }
 
-.login h2 {
-  font-size: 25px;
-}
+  .login h2 {
+    font-size: 25px;
+  }
 }
 @media(max-width:320px){
-.login {
-  width: 90%;
-}
+  .login {
+    width: 90%;
+  }
 
 
 
 
-.forgot  a {
-  font-size: 11px;
-}
-.login-bottom {
-  padding: 20px 25px;
-}
-.login-bottom h3 {
-  font-size: 11px;
-}
-.login-bottom h3 a {
-  font-size: 17px;
-}
-body {
-  padding: 50px 0px 0px 0px;
-}
-.copyright p {
-  font-size: 13px;
-}
-.copyright p a{
-  font-size: 13px;
-}
-.login h2 {
-  font-size: 23px;
-  margin:0px 0px 35px 0px;
-}
-.copyright {
-  padding: 75px 0px 0px 0px;
-}
+  .forgot  a {
+    font-size: 11px;
+  }
+  .login-bottom {
+    padding: 20px 25px;
+  }
+  .login-bottom h3 {
+    font-size: 11px;
+  }
+  .login-bottom h3 a {
+    font-size: 17px;
+  }
+  body {
+    padding: 50px 0px 0px 0px;
+  }
+  .copyright p {
+    font-size: 13px;
+  }
+  .copyright p a{
+    font-size: 13px;
+  }
+  .login h2 {
+    font-size: 23px;
+    margin:0px 0px 35px 0px;
+  }
+  .copyright {
+    padding: 75px 0px 0px 0px;
+  }
 }
 
 .login-top input[type="password"],.login-top input[type="text"]{
@@ -257,8 +257,8 @@ body {
 }
 #tdTest{
   margin-top: 100px;
-  width: 1000px;
-  //background-color: #E15748;
+  width: 900px;
+//background-color: #E15748;
 }
 .forgot input[type="submit"] {
   background: #1c86ad;

@@ -180,6 +180,12 @@ a:focus {
 	text-align: center;
 	font-weight: bold;
 	padding-top: 4em;
+body{
+	background: #D4D4D4;
+	color: #D5D6E2;
+	font-weight: 500;
+	font-size: 1.05em;
+	font-family: "Microsoft YaHei","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif;
 }
 
 .media-item {
