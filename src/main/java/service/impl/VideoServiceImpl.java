@@ -42,4 +42,8 @@ public class VideoServiceImpl implements VideoService {
         return videoMapper.getVideoByType(type);
     }
 
+    public List<VideoPo> selAll(){
+        return videoMapper.selAll();
+    }
+
 }

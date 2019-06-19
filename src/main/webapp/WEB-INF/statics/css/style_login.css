@@ -43,14 +43,7 @@ body{
   margin: 0px 0px 50px 0px;
   font-family: 'Droid Serif', serif;
 }
-.login-top {
-  background: rgba(225,225,225,0.5);
-  border-radius: 25px 25px 0px 0px;
-  -webkit-border-radius:  25px 25px 0px 0px;
-  -moz-border-radius: 25px 25px 0px 0px;
-  -o-border-radius: 25px 25px 0px 0px;
-  padding: 40px 60px;
-}
+
 .login-top h1 {
   text-align: center;
   font-size: 27px;
@@ -58,7 +51,7 @@ body{
   color: #000000;
   margin: 0px 0px 20px 0px;
 }
-.login-top input[type="text"] {
+/*.login-top input[type="text"] {
 	outline: none;
   font-size: 15px;
   font-weight: 500;
@@ -73,23 +66,8 @@ body{
   margin: 0px 0px 12px 0px;
   width: 88%;
   -webkit-appearance: none;
-}
-.login-top input[type="password"]{
-	outline: none;
-  font-size: 15px;
-  font-weight: 500;
-  color: #818181;
-  padding: 15px 20px;
-  background: #CACACA;
-  border: 1px solid #ccc;
-  border-radius:25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -o-border-radius: 25px;
-  margin: 0px 0px 12px 0px;
-  width: 88%;
-  -webkit-appearance: none;
-}
+}*/
+
 .forgot  a{
   font-size: 13px;
   font-weight: 500;
@@ -230,12 +208,10 @@ body {
   font-size: 15px;
   width: 22%;
 }
-.login-top input[type="text"] {
+/*.login-top input[type="text"] {
   padding: 12px 20px;
-}
-.login-top input[type="password"] {
-  padding: 12px 20px;
-}
+}*/
+
 .login-bottom h3 a {
   font-size: 19px;
 }
@@ -256,15 +232,11 @@ body {
 .login-top h1 {
   font-size: 21px;
 }
-.login-top input[type="text"] {
+/*.login-top input[type="text"] {
   width: 85%;
-}
-.login-top {
-  padding: 30px 40px;
-}
-.login-top input[type="password"] {
-  width: 85%;
-}
+}*/
+
+
 .login h2 {
   font-size: 25px;
 }
@@ -273,21 +245,10 @@ body {
 .login {
   width: 90%;
 }
-.login-top {
-  padding: 20px 25px;
-}
-.login-top input[type="text"] {
-  width: 81%;
-  padding: 10px 20px;
-  font-size: 13px;
-  margin: 0px 0px 7px 0px;
-}
-.login-top input[type="password"] {
-  width: 81%;
-  padding: 10px 20px;
-  font-size: 13px;
-  margin: 0px 0px 7px 0px;
-}
+
+
+
+
 .forgot input[type="submit"] {
   font-size: 11px;
   width: 25%;
@@ -323,3 +284,59 @@ body {
 }
 }
 /*--meadia quiries end here--*/
+/*#PassWord{
+  background-color: #E15748;
+  color: #0aa06e;
+}*/
+/*  .login-top input[type="password"] {
+    padding: 12px 20px;
+  }
+  .login-top input[type="password"] {
+    width: 100%;
+  }
+.login-top input[type="password"] {
+  width: 81%;
+  padding: 10px 20px;
+  font-size: 13px;
+  margin: 0px 0px 7px 0px;
+}*/
+.login-top input[type="password"],.login-top input[type="text"]{
+  outline: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #818181;
+  padding: 15px 20px;
+//background: #CACACA;
+  background-color: #CACACA;
+  border: 1px solid #ccc;
+  border-radius:25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -o-border-radius: 25px;
+  margin: 0px 0px 12px 0px;
+  width: 150%;
+  -webkit-appearance: none;
+}
+
+.login-top {
+  background: rgba(225,225,225,0.5);
+  border-radius: 25px 25px 0px 0px;
+  -webkit-border-radius:  25px 25px 0px 0px;
+  -moz-border-radius: 25px 25px 0px 0px;
+  -o-border-radius: 25px 25px 0px 0px;
+  padding: 40px 60px;
+}
+/*
+.login-top {
+  padding: 30px 40px;
+}
+.login-top {
+  padding: 20px 25px;
+}*/
+/*
+.login-top input[type="text"] {
+  width: 81%;
+  padding: 10px 20px;
+  font-size: 13px;
+  margin: 0px 0px 7px 0px;
+}*/

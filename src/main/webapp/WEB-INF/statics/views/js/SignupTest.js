@@ -23,21 +23,26 @@ function validateFormInput(input,r){
 
 $(function(){
 
+    var b1;
+    var b2;
+    var b3;
+    var b4;
+    var b5;
     //验证输入事件处理
     $("#UserName")[0].oninput = function(){
-        validateFormInput($("#UserName"),/^\w{2,30}$/);
+        b1=validateFormInput($("#UserName"),/^[a-zA-Z][a-zA-Z0-9]{2,12}$/);
     }
     $("#PassWord")[0].oninput = function(){
-        validateFormInput($("#PassWord"),/^\w{2,30}$/);
+        b2=validateFormInput($("#PassWord"),/^[a-zA-Z0-9]{4,10}$/);
     }
     $("#Sex")[0].oninput = function(){
-        validateFormInput($("#Sex"),/^\w{2,30}$/);
+        b3=validateFormInput($("#Sex"),/^\w{1,8}$/);
     }
     $("#Age")[0].oninput = function(){
-        validateFormInput($("#Age"),/^\w{2,30}$/);
+        b4=validateFormInput($("#Age"),/^[0-9]{1,8}$/);
     }
     $("#Email")[0].oninput = function(){
-        validateFormInput($("#Email"),/^\w{2,30}$/);
+        b5=validateFormInput($("#Email"),/^\w+@\w+(\.[a-zA-Z]{2,3}){1,2}$/);
     }
 
     $("#zhuce").click(function(){
@@ -52,11 +57,7 @@ $(function(){
         //console.log(data);
         var url="http://localhost:8080/VBlog_war/usr";
 
-        var b1 = validateFormInput($("#UserName"),/^\w{2,30}$/);
-        var b2 = validateFormInput($("#PassWord"),/^\w{2,30}$/);
-        var b3 = validateFormInput($("#Sex"),/^\w{2,30}$/);
-        var b4 = validateFormInput($("#Age"),/^\w{2,30}$/);
-        var b5 = validateFormInput($("#Email"),/^\w{2,30}$/);
+
 
         if(b1 && b2 && b3 && b4 && b5){
             $("#zhuce").myAjaxGet(url,data,function(da){

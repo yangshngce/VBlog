@@ -10,4 +10,5 @@ public interface VideoService {
     Integer upLoadVideo(VideoForm videoForm);
     List<VideoPo> downLoadVideo(Integer usrId);
     List<VideoPo> getVideoByType(String type);
+    List<VideoPo> selAll();
 }

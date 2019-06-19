@@ -46,9 +46,12 @@ $(function(){
             $("#denglu").myAjaxGet(url,data,function(da){
                 console.log(da);
                 if (da.code == "1001") { //判断返回值，这里根据的业务内容可做调整
-                        alert(da.message);
-                        console.log(data);
-                        window.location.href =  url;//登录后的页面地址
+                    alert(da.message);
+                    console.log(da);
+
+                    window.location.href =
+                        "http://localhost:8080/VBlog_war";//登录后的页面地址
+
                 } else if (da.code == "1002"){
                     alert(da.message);
                     return false;
