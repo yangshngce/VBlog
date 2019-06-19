@@ -339,31 +339,5 @@ function stopAutoSlide() {
 
 sliderEl.addEventListener('mousemove', stopAutoSlide);
 sliderEl.addEventListener('touchstart', stopAutoSlide);
+
 timer = setTimeout(autoSlide, 2000);
-
-var url="http://localhost:8080/VBlog_war/sessionTest";
-var data=null;
-$().myAjaxGet(url,data,function(da){
-    console.log(da);
-    if (da.code == "3001") { //判断返回值，这里根据的业务内容可做调整
-        $("#personalA").text("PersonalZone");
-        $("#personalA").attr('href',"www.baidu.com");
-    } else if (da.code == "3000"){
-        $("#personalA").text("LOGIN");
-        $("#personalA").attr('href',"statics/index_login.html");
-    }
-},"get");
-
-
-
-//ajaxGet提交
-$.fn.myAjaxGet=function (u,d,fn,type) {
-    $.ajax({
-        url:u,
-        data:d?d:{},
-        datatype:"json",
-        type:type,
-        success:fn?fn:null
-    });
-
-};

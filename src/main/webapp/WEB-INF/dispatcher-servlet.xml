@@ -25,6 +25,7 @@
     <mvc:resources mapping="/views/**" location="/WEB-INF/views/"/>
     <mvc:resources mapping="/yuyy_html_test/**" location="/WEB-INF/statics/yuyy_html_test/"/>
     <mvc:resources mapping="/statics/**" location="/WEB-INF/statics/"/>
+    <mvc:resources mapping="/views/js/**" location="/WEB-INF/statics/views/js/"/>
 
     <!--<mvc:resources mapping="/font/**" location="/WEB-INF/statics/font/"/>-->
     <!--<mvc:resources mapping="/font-awesome/**" location="/WEB-INF/statics/font-awesome/"/>-->

@@ -33,7 +33,7 @@ $(function(){
         var type="get";
         var url="http://localhost:8080/VBlog_war/commentTest";
         console.log(data);
-        $("#bt").myAjaxGet(url,data,function(da){
+        $("#bt02").myAjaxGet(url,data,function(da){
             console.log(da);
             for (var i=0;i<da.length;i++){
                 $("#list").append("<li>"+da[i].usrName+da[i].createTime+da[i].content+"</li>")

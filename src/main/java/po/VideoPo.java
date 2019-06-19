@@ -12,6 +12,15 @@ public class VideoPo {
     private Integer RANK;
     private String LABLE;
     private String URL;
+    private String IMAGE_URL;
+
+    public String getIMAGE_URL() {
+        return IMAGE_URL;
+    }
+
+    public void setIMAGE_URL(String IMAGE_URL) {
+        this.IMAGE_URL = IMAGE_URL;
+    }
 
     public VideoPo() {
         this.VIDEO_ID = 0;
@@ -22,6 +31,7 @@ public class VideoPo {
         this.RANK = 0;
         this.LABLE = "";
         this.URL = "";
+        this.IMAGE_URL="";
     }
 
     public Integer getVIDEO_ID() {
@@ -99,6 +109,7 @@ public class VideoPo {
                 ", RANK=" + RANK +
                 ", LABLE='" + LABLE + '\'' +
                 ", URL='" + URL + '\'' +
+                ", IMAGE_URL='" + IMAGE_URL + '\'' +
                 '}';
     }
 }
