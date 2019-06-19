@@ -43,13 +43,14 @@ public class UsrController {
 
     @RequestMapping(value = "/usr",method = RequestMethod.POST)
     @ResponseBody
-    public Result register(RegisterForm registerForm){
+    public Result register(RegisterForm registerForm,HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse){
         Integer temp=usrService.register(registerForm);
         System.out.println("temp:"+temp);
         switch(temp){
             case 0:
                 return new Result(true,"2000","注册失败",null);
             case 1:
+                httpServletRequest.getSession().setAttribute("loginUsr",new LoginForm(registerForm.getUser_name()));
                 return new Result(true,"2001","注册成功",null);
             case 2:
                 return new Result(true,"2002","注册失败，用户已存在",null);

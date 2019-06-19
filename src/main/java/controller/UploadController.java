@@ -18,12 +18,12 @@ public class UploadController {
     public String upload(@RequestParam(value = "file", required = false) MultipartFile multipartFile, HttpServletRequest request, ModelMap map) {
             String message = "";
         FileEntity entity = new FileEntity();
-        Upload fileUploadTool = new Upload();
+        //Upload fileUploadTool = new Upload();
 
 
 //JSONObject getObj = new JSONObject();  
         try {
-            entity = fileUploadTool.createFile(multipartFile, request);
+            //entity = fileUploadTool.createFile(multipartFile, request);
             if(entity != null){
                 //service.saveFile(entity);
                 message = "上传成功";
