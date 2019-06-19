@@ -1,6 +1,7 @@
 package controller;
 
 import bo.CommentBo;
+import bo.VideoImageBo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,5 +34,12 @@ public class TestController {
     @ResponseBody
     public List<CommentBo> commentTest(String videoId){
         return commentService.getComment(Integer.valueOf(videoId));
+    }
+
+
+    @RequestMapping(value = "/mainLoadData")
+    @ResponseBody
+    public List<VideoImageBo> videoImageBoList(){
+
     }
 }
