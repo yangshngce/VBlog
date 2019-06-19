@@ -2,7 +2,7 @@
 function addMsg(td,contend,color){
     var $span = td.find("span");
     if($span.length <= 0){
-        $span = $("<span style='padding-left:1px'></span>");
+        $span = $("<span style='padding-right:1px'></span>");
         td.append($span);
     }
     $span.html(contend);

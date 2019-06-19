@@ -20,22 +20,11 @@ public class TestController {
     @Autowired
     private CommentService commentService;
 
-    @RequestMapping(value = "/sessionTest")
-    @ResponseBody
-    public Result sessionTest(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
-        System.out.println("session测试");
-        if (httpServletRequest.getSession().getAttribute("loginUsr")!=null){
-            LoginForm loginForm=(LoginForm)httpServletRequest.getSession().getAttribute("loginUsr");
-            loginForm.setPassword("******");
-            return new Result(true,3001+"","session包含用户",loginForm);
-        }else {
-            return new Result(true,3000+"","session为空",null);
-        }
-    }
-
     @RequestMapping(value = "/commentTest")
     @ResponseBody
-    public List<CommentBo> commentTest(String videoId){
+    public List<CommentBo> commentTest(String videoId,HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse){
+        httpServletResponse.setHeader("Access-Control-Allow-Origin", "*");
+        System.out.println("进入commentTest："+videoId);
         return commentService.getComment(Integer.valueOf(videoId));
     }
 

@@ -51,22 +51,6 @@ body{
   color: #000000;
   margin: 0px 0px 20px 0px;
 }
-/*.login-top input[type="text"] {
-	outline: none;
-  font-size: 15px;
-  font-weight: 500;
-  color: #818181;
-  padding: 15px 20px;
-  background: #CACACA;
-  border: 1px solid #ccc;
-  border-radius:25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -o-border-radius: 25px;
-  margin: 0px 0px 12px 0px;
-  width: 88%;
-  -webkit-appearance: none;
-}*/
 
 .forgot  a{
   font-size: 13px;
@@ -79,33 +63,8 @@ body{
 .forgot  a:hover{
   color: #818181;
 }
-.forgot input[type="submit"] {
-  background: #1c86ad;
-  color: #FFF;
-  font-size: 17px;
-  font-weight: 400;
-  padding: 8px 7px;
-  width: 20%;
-  display: inline-block;
-  cursor: pointer;
-  border-radius: 6px;
-  -webkit-border-radius: 19px;
-  -moz-border-radius: 6px;
-  -o-border-radius: 6px;
-  margin: 0px 7px 0px 3px;
-  outline: none;
-  border: none;
-}
-.forgot input[type="submit"]:hover {
-	background:#818181;
-	transition: 0.5s all;
-  -webkit-transition: 0.5s all;
-  -moz-transition: 0.5s all;
-  -o-transition: 0.5s all;
-}
-.forgot {
-  text-align: right;
-}
+
+
 .login-bottom {
   background-image: linear-gradient(to right, #28AADC,#04402C);
   opacity:0.85;
@@ -204,13 +163,6 @@ body {
 .login-top h1 {
   font-size: 23px;
 }
-.forgot input[type="submit"] {
-  font-size: 15px;
-  width: 22%;
-}
-/*.login-top input[type="text"] {
-  padding: 12px 20px;
-}*/
 
 .login-bottom h3 a {
   font-size: 19px;
@@ -232,10 +184,6 @@ body {
 .login-top h1 {
   font-size: 21px;
 }
-/*.login-top input[type="text"] {
-  width: 85%;
-}*/
-
 
 .login h2 {
   font-size: 25px;
@@ -249,11 +197,6 @@ body {
 
 
 
-.forgot input[type="submit"] {
-  font-size: 11px;
-  width: 25%;
-  padding: 6px 7px;
-}
 .forgot  a {
   font-size: 11px;
 }
@@ -283,23 +226,7 @@ body {
   padding: 75px 0px 0px 0px;
 }
 }
-/*--meadia quiries end here--*/
-/*#PassWord{
-  background-color: #E15748;
-  color: #0aa06e;
-}*/
-/*  .login-top input[type="password"] {
-    padding: 12px 20px;
-  }
-  .login-top input[type="password"] {
-    width: 100%;
-  }
-.login-top input[type="password"] {
-  width: 81%;
-  padding: 10px 20px;
-  font-size: 13px;
-  margin: 0px 0px 7px 0px;
-}*/
+
 .login-top input[type="password"],.login-top input[type="text"]{
   outline: none;
   font-size: 15px;
@@ -314,7 +241,7 @@ body {
   -moz-border-radius: 25px;
   -o-border-radius: 25px;
   margin: 0px 0px 12px 0px;
-  width: 150%;
+  width: 80%;
   -webkit-appearance: none;
 }
 
@@ -324,19 +251,48 @@ body {
   -webkit-border-radius:  25px 25px 0px 0px;
   -moz-border-radius: 25px 25px 0px 0px;
   -o-border-radius: 25px 25px 0px 0px;
-  padding: 40px 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 50px;
 }
-/*
-.login-top {
-  padding: 30px 40px;
+#tdTest{
+  margin-top: 100px;
+  width: 1000px;
+  //background-color: #E15748;
 }
-.login-top {
-  padding: 20px 25px;
-}*/
-/*
-.login-top input[type="text"] {
-  width: 81%;
-  padding: 10px 20px;
-  font-size: 13px;
-  margin: 0px 0px 7px 0px;
-}*/
+.forgot input[type="submit"] {
+  background: #1c86ad;
+  color: #FFF;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 8px 7px;
+  width: 20%;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 6px;
+  -webkit-border-radius: 19px;
+  -moz-border-radius: 6px;
+  -o-border-radius: 6px;
+  margin: 0px 0px 0px 308px;
+
+  outline: none;
+  border: none;
+}
+
+.register{
+  outline: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: red;
+  padding: 15px 20px;
+  background: red;
+  background-color: red;
+  border: 1px solid #ccc;
+  border-radius:25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -o-border-radius: 25px;
+  margin: 0px 0px 12px 0px;
+  width: 80%;
+  -webkit-appearance: none;
+}
