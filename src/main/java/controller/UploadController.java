@@ -21,9 +21,7 @@ public class UploadController {
             String message = "";
         FileEntity entity = new FileEntity();
         Upload fileUploadTool = new Upload();
-        String videoPath="WEB-INF/statics/videos";
-        String savePath= "WEB-INF/statics/videos/videoImages";
-        VideoFrameKit videoFrameKit = new VideoFrameKit();
+
 
 //JSONObject getObj = new JSONObject();  
         try {
@@ -33,8 +31,6 @@ public class UploadController {
                 message = "上传成功";
                 map.put("entity", entity);
                 map.put("result", message);
-                videoFrameKit.fetchFrame(videoPath,savePath);
-
             }else{
                 message = "上传失败";
                 map.put("result", message);

@@ -24,7 +24,7 @@ public  class VideoFrameKit {
      * @throws Exception
      * @throws IOException
      */
-    public void fetchFrame(String videofile, String framefile)
+    public static void fetchFrame(String videofile, String framefile)
             throws Exception, IOException {
         FFmpegFrameGrabber ff = new FFmpegFrameGrabber(videofile);
         ff.start();
@@ -66,8 +66,10 @@ public  class VideoFrameKit {
         Java2DFrameConverter converter =new Java2DFrameConverter();
         BufferedImage bi =converter.getBufferedImage(f);
         File output =new File(targetFileName);
+        System.out.println("1111111111！");
         try {
             ImageIO.write(bi,"jpeg",output);
+            System.out.println("保存成功!");
         }catch (IOException e) {
             e.printStackTrace();
         }
