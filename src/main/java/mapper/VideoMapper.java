@@ -1,5 +1,6 @@
 package mapper;
 
+import bo.VideoImageBo;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -23,4 +24,7 @@ public interface VideoMapper {
 
     @Select("select * from res_video when TYPE = '${type}';")
     List<VideoPo> getVideoByType(@Param("type")String type);
+
+    @Select("select URL from res_video when VIDEO_NAME = '${videoName}';")
+    String playVideo(@Param("videoName")String videoName);
 }

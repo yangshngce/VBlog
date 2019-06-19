@@ -47,7 +47,7 @@ public class VideoServiceImpl implements VideoService {
     public List<VideoPo> getVideoByType(String type) {
         return videoMapper.getVideoByType(type);
     }
-
+    @Override
     public List<VideoImageBo> selAll(){
         videoImageBos.clear();
         List<VideoPo> videoPos= videoMapper.selAll();
@@ -62,5 +62,12 @@ public class VideoServiceImpl implements VideoService {
         }
         return videoImageBos;
     }
+
+    @Override
+    public String playVideo(VideoImageBo videoImageBo) {
+        return videoMapper.playVideo(videoImageBo.getVideoName());
+    }
+
+
 
 }

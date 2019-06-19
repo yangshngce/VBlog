@@ -15,10 +15,16 @@ public class VIdeoControlloer {
 
         @Autowired
         private VideoService videoService;
+        @Autowired
         @RequestMapping(value = "mainLoadData")
         @ResponseBody
         public List<VideoImageBo> videoImageBoList(){
              return videoService.selAll();
+        }
+        @RequestMapping(value = "/play")
+        @ResponseBody
+        public String playVideo(VideoImageBo videoImageBo){
+            return videoService.playVideo(videoImageBo);
         }
 
     }

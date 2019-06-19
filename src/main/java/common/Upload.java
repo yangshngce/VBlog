@@ -155,7 +155,7 @@ public class Upload {
     /**
      * 视频类型判断(flv)
      *
-     * @param fileName
+     * @param fileEnd
      * @return
      */
     private boolean checkMediaType(String fileEnd) {
@@ -173,7 +173,7 @@ public class Upload {
     /**
      * 视频类型判断(AVI)
      *
-     * @param fileName
+     * @param fileEnd
      * @return
      */
     private boolean checkAVIType(String fileEnd) {
