@@ -37,9 +37,4 @@ public class TestController {
     }
 
 
-    @RequestMapping(value = "/mainLoadData")
-    @ResponseBody
-    public List<VideoImageBo> videoImageBoList(){
-
-    }
 }
