@@ -7,6 +7,7 @@ public class VideoForm {
     private Integer RANK;
     private String LABLE;
     private String URL;
+    private String IMG_URL;
 
     public String getVIDEO_NAME() {
         return VIDEO_NAME;
@@ -56,6 +57,14 @@ public class VideoForm {
         this.URL = URL;
     }
 
+    public String getIMG_URL() {
+        return IMG_URL;
+    }
+
+    public void setIMG_URL(String IMG_URL) {
+        this.IMG_URL = IMG_URL;
+    }
+
     @Override
     public String toString() {
         return "VideoForm{" +
@@ -65,6 +74,7 @@ public class VideoForm {
                 ", RANK=" + RANK +
                 ", LABLE='" + LABLE + '\'' +
                 ", URL='" + URL + '\'' +
+                ", IMG_URL='" + IMG_URL + '\'' +
                 '}';
     }
 }

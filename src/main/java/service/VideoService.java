@@ -1,6 +1,7 @@
 package service;
 
 import bo.VideoImageBo;
+import model.Result;
 import po.VideoPo;
 import web.VideoForm;
 

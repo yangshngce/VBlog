@@ -2,8 +2,8 @@
 	font-weight: normal;
 	font-style: normal;
 	font-family: 'codropsicons';
-	src: url('../fonts/codropsicons/codropsicons.eot');
-	src: url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'), url('../fonts/codropsicons/codropsicons.woff') format('woff'), url('../fonts/codropsicons/codropsicons.ttf') format('truetype'), url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+	src: url('../font/codropsicons/codropsicons.eot');
+	src: url('../font/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'), url('../font/codropsicons/codropsicons.woff') format('woff'), url('../font/codropsicons/codropsicons.ttf') format('truetype'), url('../font/codropsicons/codropsicons.svg#codropsicons') format('svg');
 }
 
 *,
@@ -179,7 +179,7 @@ a:focus {
 .content--related {
 	text-align: center;
 	font-weight: bold;
-	padding-top: 4em;
+	padding-top: 4em;}
 body{
 	background: #D4D4D4;
 	color: #D5D6E2;
