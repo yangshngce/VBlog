@@ -1,14 +1,8 @@
 $(function(){
-    $().myAjaxGet(url,data,function(da){
-        console.log("01");
-        for (var i=0;i<da.length;i++){
-            $("#list").append("<li>"+da[i].usrName+da[i].createTime+da[i].content+"</li>")
-        }
-    },type);
+
     $("#submit").click(function(){
         var yourcomment = $("#your-comment").prop("value");
-
-        var data={ videoId: yourcomment };
+        var data={ videoId: "10002" };
         console.log(data);
         alert("000");
         var type="get";

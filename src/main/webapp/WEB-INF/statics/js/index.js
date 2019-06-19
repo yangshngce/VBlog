@@ -1,5 +1,33 @@
 'use strict';
-
+console.log("8888888888");
+var url="http://localhost:8080/VBlog_war/session";
+var data=null;
+$.ajax({
+    url:url,
+    data:data?data:{},
+    datatype:"json",
+    type:"get",
+    success:function(da){
+        console.log(da);
+        if (da.code == "3001") { //判断返回值，这里根据的业务内容可做调整
+            $("#personalA").text("PersonalZone");
+            $("#personalA").attr('href',"statics/yuyy_html_test/personalZone.html");
+        } else if (da.code == "3000"){
+            $("#personalA").text("LOGIN");
+            $("#personalA").attr('href',"statics/index_login.html");
+        }
+    }
+});
+/*$().myAjaxGet(url,data,function(da){
+    console.log(da);
+    if (da.code == "3001") { //判断返回值，这里根据的业务内容可做调整
+        $("#personalA").text("PersonalZone");
+        $("#personalA").attr('href',"statics/yuyy_html_test/personalZone.html");
+    } else if (da.code == "3000"){
+        $("#personalA").text("LOGIN");
+        $("#personalA").attr('href',"statics/index_login.html");
+    }
+},"get");*/
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -36,21 +64,21 @@ var Slider = function () {
     this.onMouseMove = this.onMouseMove.bind(this);
 
     // taking advantage of the live nature of 'getElement...' methods
-    this.activeImg = el.getElementsByClassName(activeImgClass);
-    this.activeText = el.getElementsByClassName(activeTextClass);
-    this.images = el.getElementsByTagName('img');
+    //this.activeImg = el.getElementsByClassName(activeImgClass);
+    //this.activeText = el.getElementsByClassName(activeTextClass);
+    //this.images = el.getElementsByTagName('img');
 
-    document.getElementById('slider-dots').addEventListener('click', this.onDotClick.bind(this));
+    //document.getElementById('slider-dots').addEventListener('click', this.onDotClick.bind(this));
 
-    document.getElementById('left').addEventListener('click', this.prev.bind(this));
+    //document.getElementById('left').addEventListener('click', this.prev.bind(this));
 
-    document.getElementById('right').addEventListener('click', this.next.bind(this));
+    //document.getElementById('right').addEventListener('click', this.next.bind(this));
 
-    window.addEventListener('resize', this.onResize.bind(this));
+    //window.addEventListener('resize', this.onResize.bind(this));
 
     this.onResize();
 
-    this.length = this.images.length;
+    //this.length = this.images.length;
     this.lastX = this.lastY = this.targetX = this.targetY = 0;
   }
 
@@ -66,13 +94,13 @@ var Slider = function () {
 
     if (!isMobile && !this.mouseWatched) {
       this.mouseWatched = true;
-      this.el.addEventListener('mousemove', this.onMouseMove);
-      this.el.style.setProperty('--img-prev', 'url(' + this.images[+this.activeImg[0].dataset.id - 1].src + ')');
-      this.contentEl.style.setProperty('transform', 'translateZ(' + this.zDistance + ')');
+      //this.el.addEventListener('mousemove', this.onMouseMove);
+      //this.el.style.setProperty('--img-prev', 'url(' + this.images[+this.activeImg[0].dataset.id - 1].src + ')');
+      //this.contentEl.style.setProperty('transform', 'translateZ(' + this.zDistance + ')');
     } else if (isMobile && this.mouseWatched) {
       this.mouseWatched = false;
-      this.el.removeEventListener('mousemove', this.onMouseMove);
-      this.contentEl.style.setProperty('transform', 'none');
+      //this.el.removeEventListener('mousemove', this.onMouseMove);
+      //this.contentEl.style.setProperty('transform', 'none');
     }
   };
 
@@ -226,7 +254,7 @@ var Slider = function () {
       _this.positionImage(_this.getMouseCoefficients());
 
       currentImg.classList.add(transitClass, inClass);
-      currentImg.addEventListener('transitionend', onImageTransitionEnd);
+      //currentImg.addEventListener('transitionend', onImageTransitionEnd);
     });
 
     if (!this.isMobile) this.switchBackgroundImage(nextId);
@@ -255,7 +283,7 @@ var Slider = function () {
 
     activeText.classList.add(backwardsClass);
     activeText.classList.remove(this.ACTIVE_TEXT_CLASS);
-    activeText.addEventListener('transitionend', onTextTransitionEnd);
+    //activeText.addEventListener('transitionend', onTextTransitionEnd);
 
     requestAnimationFrame(function () {
       activeText.classList.remove(backwardsClass);
@@ -296,7 +324,7 @@ var Slider = function () {
     var imageUrl = 'url(' + this.images[+nextId - 1].src + ')';
 
     el.style.setProperty('--img-next', imageUrl);
-    el.addEventListener('transitionend', onBackgroundTransitionEnd);
+    //el.addEventListener('transitionend', onBackgroundTransitionEnd);
     el.classList.add(bgClass);
   };
 
@@ -337,22 +365,29 @@ function stopAutoSlide() {
   this.removeEventListener('mousemove', stopAutoSlide);
 }
 
-sliderEl.addEventListener('mousemove', stopAutoSlide);
-sliderEl.addEventListener('touchstart', stopAutoSlide);
+//sliderEl.addEventListener('mousemove', stopAutoSlide);
+//sliderEl.addEventListener('touchstart', stopAutoSlide);
 timer = setTimeout(autoSlide, 2000);
 
+console.log("99999999999999");
 var url="http://localhost:8080/VBlog_war/session";
 var data=null;
-$().myAjaxGet(url,data,function(da){
-    console.log(da);
-    if (da.code == "3001") { //判断返回值，这里根据的业务内容可做调整
-        $("#personalA").text("PersonalZone");
-        $("#personalA").attr('href',"statics/yuyy_html_test/personalZone.html");
-    } else if (da.code == "3000"){
-        $("#personalA").text("LOGIN");
-        $("#personalA").attr('href',"statics/index_login.html");
+$.ajax({
+    url:url,
+    data:data?data:{},
+    datatype:"json",
+    type:"get",
+    success:function(da){
+        console.log(da);
+        if (da.code == "3001") { //判断返回值，这里根据的业务内容可做调整
+            $("#personalA").text("PersonalZone");
+            $("#personalA").attr('href',"statics/yuyy_html_test/personalZone.html");
+        } else if (da.code == "3000"){
+            $("#personalA").text("LOGIN");
+            $("#personalA").attr('href',"statics/index_login.html");
+        }
     }
-},"get");
+});
 
 
 
