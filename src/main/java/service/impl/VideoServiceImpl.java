@@ -1,5 +1,7 @@
 package service.impl;
 
+import bo.VideoImageBo;
+import mapper.UserMapper;
 import mapper.VideoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +20,11 @@ public class VideoServiceImpl implements VideoService {
 
     @Autowired
     private VideoPo videoPo;
+    @Autowired
+    private List<VideoImageBo> videoImageBos;
 
+    @Autowired
+    private UserMapper userMapper;
     @Override
     public Integer upLoadVideo(VideoForm videoForm) {
         videoPo.setVIDEO_NAME(videoForm.getVIDEO_NAME());
@@ -42,8 +48,19 @@ public class VideoServiceImpl implements VideoService {
         return videoMapper.getVideoByType(type);
     }
 
-    public List<VideoPo> selAll(){
-        return videoMapper.selAll();
+    public List<VideoImageBo> selAll(){
+        videoImageBos.clear();
+        List<VideoPo> videoPos= videoMapper.selAll();
+        for (VideoPo videoPo:videoPos
+             ) {
+            VideoImageBo videoImageBo = new VideoImageBo();
+            videoImageBo.setVideoName(videoPo.getVIDEO_NAME());
+            videoImageBo.setImageUrl(videoPo.getIMAGE_URL());
+            videoImageBo.setCreateTime(videoPo.getCREATE_TIME());
+            videoImageBo.setUploadUsr(userMapper.getUsrNameById(videoPo.getUPLOAD_USR()));
+            videoImageBos.add(videoImageBo);
+        }
+        return videoImageBos;
     }
 
 }

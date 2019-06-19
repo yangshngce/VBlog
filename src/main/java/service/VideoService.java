@@ -1,6 +1,6 @@
 package service;
 
-import org.apache.ibatis.annotations.Param;
+import bo.VideoImageBo;
 import po.VideoPo;
 import web.VideoForm;
 
@@ -10,5 +10,5 @@ public interface VideoService {
     Integer upLoadVideo(VideoForm videoForm);
     List<VideoPo> downLoadVideo(Integer usrId);
     List<VideoPo> getVideoByType(String type);
-    List<VideoPo> selAll();
+    List<VideoImageBo> selAll();
 }

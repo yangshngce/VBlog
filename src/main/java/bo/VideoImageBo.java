@@ -1,5 +1,8 @@
 package bo;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class VideoImageBo {
     private String imageUrl;
     private String videoName;
