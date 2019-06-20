@@ -8,6 +8,25 @@ public class FileEntity {
     private String path;
     private String titleOrig;
     private String titleAlter;
+    private String imgPath;
+    private String videoPath;
+
+    public String getVideoPath() {
+        return videoPath;
+    }
+
+    public void setVideoPath(String videoPath) {
+        this.videoPath = videoPath;
+    }
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
+    }
+
     private Timestamp uploadTime;
     public String getType() {
         return type;
@@ -44,5 +63,19 @@ public class FileEntity {
     }
     public void setUploadTime(Timestamp uploadTime) {
         this.uploadTime = uploadTime;
+    }
+
+    @Override
+    public String toString() {
+        return "FileEntity{" +
+                "type='" + type + '\'' +
+                ", size='" + size + '\'' +
+                ", path='" + path + '\'' +
+                ", titleOrig='" + titleOrig + '\'' +
+                ", titleAlter='" + titleAlter + '\'' +
+                ", imgPath='" + imgPath + '\'' +
+                ", videoPath='" + videoPath + '\'' +
+                ", uploadTime=" + uploadTime +
+                '}';
     }
 }

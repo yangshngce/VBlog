@@ -33,6 +33,7 @@ public class VideoServiceImpl implements VideoService {
         videoPo.setTYPE(videoForm.getTYPE());
         videoPo.setRANK(videoForm.getRANK());
         videoPo.setLABLE(videoForm.getLABLE());
+        videoPo.setIMAGE_URL(videoForm.getIMG_URL());
         videoPo.setURL(videoForm.getURL());
         Integer count=videoMapper.addVideo(videoPo);
         return count>0?1:0;

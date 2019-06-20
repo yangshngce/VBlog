@@ -65,9 +65,14 @@ public class Upload {
             String newFileName = this.getName(fileName);
 // 文件扩展名
             String fileEnd = this.getFileExt(fileName);
+            String imgPath;
+            String videoPath;
+            imgPath = "E:\\Bokee\\target\\Bokee\\video\\\\"+ File.separator+ newFileName+".jpeg";
+            videoPath = "E:\\Bokee\\target\\Bokee\\video\\\\"+ File.separator+ newFileName+fileEnd;
 // 绝对路径
             String fileNamedirs = logoRealPathDir + File.separator + newFileName + fileEnd;
             System.out.println("保存的绝对路径：" + fileNamedirs);
+            System.out.println("截图的绝对路径：" + imgPath);
             File filedirs = new File(fileNamedirs);
 // 转入文件
             try {
@@ -118,6 +123,8 @@ public class Upload {
                 entity.setPath(finalFileDir);
                 entity.setTitleOrig(name);
                 entity.setTitleAlter(newFileName);
+                entity.setImgPath(imgPath);
+                entity.setVideoPath(videoPath);
                 Timestamp timestamp = new Timestamp(System.currentTimeMillis());
                 entity.setUploadTime(timestamp);
                 return entity;

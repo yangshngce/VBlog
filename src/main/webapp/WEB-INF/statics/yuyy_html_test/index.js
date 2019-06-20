@@ -26,6 +26,10 @@ $(function(){
             console.log(da);
         },type);
     });
+    $("#img1").click(function () {
+        var url=""
+
+    })
     $("#bt02").click(function(){
         var data={
             videoId:"10002"
