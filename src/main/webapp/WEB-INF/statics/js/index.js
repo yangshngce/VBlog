@@ -26,7 +26,7 @@ $.ajax({
         console.log(da);
         if (da.code == "3001") { //判断返回值，这里根据的业务内容可做调整
             $("#personalA").text("PersonalZone");
-            $("#personalA").attr('href',"statics/yuyy_html_test/personalZone.html");
+            $("#personalA").attr('href',"statics/user.html");
         } else if (da.code == "3000"){
             $("#personalA").text("LOGIN");
             $("#personalA").attr('href',"statics/index_login.html");
@@ -396,7 +396,7 @@ $.ajax({
         console.log(da);
         if (da.code == "3001") { //判断返回值，这里根据的业务内容可做调整
             $("#personalA").text("PersonalZone");
-            $("#personalA").attr('href',"statics/yuyy_html_test/personalZone.html");
+            $("#personalA").attr('href',"statics/user.html");
         } else if (da.code == "3000"){
             $("#personalA").text("LOGIN");
             $("#personalA").attr('href',"statics/index_login.html");
