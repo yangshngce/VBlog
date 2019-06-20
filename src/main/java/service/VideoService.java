@@ -11,5 +11,5 @@ public interface VideoService {
     List<VideoPo> downLoadVideo(Integer usrId);
     List<VideoPo> getVideoByType(String type);
     List<VideoImageBo> selAll();
-    String playVideo(VideoImageBo videoName);
+    VideoPo playVideo(String videoName);
 }

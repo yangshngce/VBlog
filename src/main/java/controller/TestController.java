@@ -22,10 +22,10 @@ public class TestController {
 
     @RequestMapping(value = "/commentTest")
     @ResponseBody
-    public List<CommentBo> commentTest(String videoId,HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse){
+    public List<CommentBo> commentTest(String videoName,HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse){
         httpServletResponse.setHeader("Access-Control-Allow-Origin", "*");
-        System.out.println("进入commentTest："+videoId);
-        return commentService.getComment(Integer.valueOf(videoId));
+        System.out.println("进入commentTest："+videoName);
+        return commentService.getComment(Integer.valueOf(videoName));
     }
 
 

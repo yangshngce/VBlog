@@ -1,8 +1,16 @@
 $(function(){
+    console.log("打开播放页")
+    var type="get";
+    var url="http://localhost:8080/VBlog_war/play";
+    $().myAjaxGet(url,null,function(da){
+        console.log(da);
+    },type);
+
     var type="get";
     var url="http://localhost:8080/VBlog_war/commentTest";
+    var data={videoName:"10002"}
     console.log(data);
-    $("#submit").myAjaxGet(url,data,function(da){
+    $().myAjaxGet(url,data,function(da){
         console.log(da);
         for (var i=0;i<da.length;i++){
             $("#list").append("<li>"+da[i].usrName+da[i].createTime+da[i].content+"</li>")

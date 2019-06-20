@@ -22,9 +22,9 @@ public interface VideoMapper {
             "values('${VIDEO_NAME}','${CREATE_TIME}','${UPLOAD_USR}','${TYPE}','${RANK}','${LABLE}','${URL}');")
     Integer addVideo(VideoPo videoPo);
 
-    @Select("select * from res_video when TYPE = '${type}';")
+    @Select("select * from res_video where TYPE = '${type}';")
     List<VideoPo> getVideoByType(@Param("type")String type);
 
-    @Select("select URL from res_video when VIDEO_NAME = '${videoName}';")
-    String playVideo(@Param("videoName")String videoName);
+    @Select("select * from res_video where VIDEO_NAME = '${videoName}';")
+    List<VideoPo> playVideo(@Param("videoName")String videoName);
 }

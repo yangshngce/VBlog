@@ -1,26 +1,16 @@
 'use strict';
 $(function () {
     $(".zoom-container").click(function () {
-        var url="http://localhost:8080/VBlog_war/session";
-        $(this).closest(".")
+        var url="http://localhost:8080/VBlog_war/playVideo";
         var data={
-            videoName:"test"
+            videoName:$(this).attr("videoName")
         };
         $.ajax({
             url:url,
             data:data?data:{},
             datatype:"json",
             type:"get",
-            success:function(da){
-                console.log(da);
-                if (da.code == "3001") { //判断返回值，这里根据的业务内容可做调整
-                    $("#personalA").text("PersonalZone");
-                    $("#personalA").attr('href',"statics/yuyy_html_test/personalZone.html");
-                } else if (da.code == "3000"){
-                    $("#personalA").text("LOGIN");
-                    $("#personalA").attr('href',"statics/index_login.html");
-                }
-            }
+            success:null
         });
     })
 })

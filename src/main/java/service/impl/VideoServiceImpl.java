@@ -64,8 +64,10 @@ public class VideoServiceImpl implements VideoService {
     }
 
     @Override
-    public String playVideo(VideoImageBo videoImageBo) {
-        return videoMapper.playVideo(videoImageBo.getVideoName());
+    public VideoPo playVideo(String videoName) {
+        System.out.println("进入videoServiceImpl/playVideo");
+        System.out.println("数据库查询结果"+videoMapper.playVideo(videoName).get(0));
+        return videoMapper.playVideo(videoName).get(0);
     }
 
 
