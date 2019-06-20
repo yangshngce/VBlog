@@ -53,6 +53,7 @@ public class UploadController {
         }
         return urlForm;
     }
+
     @RequestMapping(value = "/addmsg")
     @ResponseBody
     public Integer addmsg(VideoForm videoForm){

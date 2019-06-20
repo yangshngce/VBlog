@@ -25,7 +25,7 @@ public class TestController {
     public List<CommentBo> commentTest(String videoName,HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse){
         httpServletResponse.setHeader("Access-Control-Allow-Origin", "*");
         System.out.println("进入commentTest："+videoName);
-        return commentService.getComment(Integer.valueOf(videoName));
+        return commentService.getComment(videoName);
     }
 
 

@@ -27,4 +27,7 @@ public interface VideoMapper {
 
     @Select("select * from res_video where VIDEO_NAME = '${videoName}';")
     List<VideoPo> playVideo(@Param("videoName")String videoName);
+
+    @Select("select * from res_video where VIDEO_NAME = '${videoName}';")
+    List<VideoPo> getOneByName(@Param("videoName")String videoName);
 }
