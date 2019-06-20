@@ -1,4 +1,29 @@
 'use strict';
+$(function () {
+    $(".zoom-container").click(function () {
+        var url="http://localhost:8080/VBlog_war/session";
+        $(this).closest(".")
+        var data={
+            videoName:"test"
+        };
+        $.ajax({
+            url:url,
+            data:data?data:{},
+            datatype:"json",
+            type:"get",
+            success:function(da){
+                console.log(da);
+                if (da.code == "3001") { //判断返回值，这里根据的业务内容可做调整
+                    $("#personalA").text("PersonalZone");
+                    $("#personalA").attr('href',"statics/yuyy_html_test/personalZone.html");
+                } else if (da.code == "3000"){
+                    $("#personalA").text("LOGIN");
+                    $("#personalA").attr('href',"statics/index_login.html");
+                }
+            }
+        });
+    })
+})
 console.log("8888888888");
 var url="http://localhost:8080/VBlog_war/session";
 var data=null;
@@ -275,7 +300,7 @@ var Slider = function () {
 
     if (this.inTransit) return;
 
-    var activeText = this.activeText[0];
+    var activeText = ""//this.activeText[0];
     var backwardsClass = this.TEXT_CLASS + '--backwards';
     var self = this;
 
@@ -293,7 +318,7 @@ var Slider = function () {
   Slider.prototype.next = function next() {
     if (this.inTransit) return;
 
-    var nextId = +this.activeImg[0].dataset.id + 1;
+    var nextId = 0;//+this.activeImg[0].dataset.id + 1;
 
     if (nextId > this.length) nextId = 1;
 
@@ -388,7 +413,43 @@ $.ajax({
         }
     }
 });
+//加载主页数据
+var url="http://localhost:8080/VBlog_war/mainLoadData";
+var data=null;
+$.ajax({
+    url:url,
+    data:data?data:{},
+    datatype:"json",
+    type:"get",
+    success:function(da){
+        console.log(da);
+        for(var i=0;i<35;i++){
+            var tempId="#video"+(i+1);
+            $(tempId).attr('videoName',da[i].videoName);
+            $(tempId).attr('videoUsr',da[i].uploadUsr);
+            $(tempId).attr('videoTime',da[i].createTime);
+            $(tempId).attr('imageUrl',da[i].imageUrl);
+        }
+        $(".low .zoom-container").siblings(".vid-name").css('background-color', 'red');
+        $(".low .zoom-container").siblings(".info").css('background-color', 'red');
+        $(".low .zoom-container").siblings(".info").children("h5").children("a").css('background-color', 'red');
 
+
+        $(".low .zoom-container").siblings(".vid-name").children("a").text($(".zoom-container").attr('videoName'));
+        $(".low .zoom-container").siblings(".info").children("span").text($(".zoom-container").attr('videoTime'));
+        $(".low .zoom-container").siblings(".info").children("h5").children("a").text($(".zoom-container").attr('videoUsr'));
+        /*for(var i=0;i<$(" .zoom-container").length;i++){
+            console.log("i==="+i);
+
+                $(".low .zoom-container")[i].siblings(".vid-name").text($(".zoom-container")[i].videoName);
+                $(".low .zoom-container")[i].siblings(".info span").text($(".zoom-container")[i].videoTime);
+                $(".low .zoom-container")[i].siblings(".info h5 a").text($(".zoom-container")[i].videoUsr);
+
+        }*/
+
+    }
+
+});
 
 
 //ajaxGet提交

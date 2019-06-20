@@ -27,6 +27,7 @@
 	<link rel="stylesheet" href="css/normalise.css">
 	<link rel="stylesheet" href="css/video-js.min.css">
 	<link rel="stylesheet" href="css/style_top.css">
+	<link rel="stylesheet" href="css/comment.css">
 	<!-- Owl Carousel Assets -->
 	<link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.theme.css" rel="stylesheet">
@@ -97,7 +98,7 @@
 				background: #f0f0f0;
 			}
 			.m {
-				width: 960px;
+				width: 1200px;
 				height: 500px;
 				margin-left: auto;
 				margin-right: auto;
@@ -108,7 +109,7 @@
 
 	<body>
 	<div class="m" style="float: contour">
-		<video id="my-video" class="video-js" controls preload="auto" width="1200" height="450"
+		<video id="my-video" class="video-js" controls preload="auto" width="1200" height="500"
 			   poster="m.jpg" data-setup="{}">
 			<source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
 			<source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
@@ -216,13 +217,19 @@
 		</script>
 	</div>
 	</body>
-	<div class="header">
+	<div class="header" style="width: 50%;margin: 20px auto 0 auto;">
 		<h2>评论</h2>
-		<input type="text" id="your-comment" value="请输入评论" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}">
-		<button id="submit" type="submit" class="comment-submit">发表评论</button>
-		<ul id="list">
-			<li>AAAAAAAAAAA</li>
-		</ul>
+		<div style="margin-top: 20px">
+			<input class="textIn" type="text" id="your-comment" value="请输入评论" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入评论';}">
+		</div>
+		<div style = "text-align:right;margin-top: 5px">
+			<button id="submit" type="submit" class="comment-submit" >发表评论</button>
+		</div>
+		<div style="margin-top: 20px">
+			<ul id="list">
+				<li>AAAAAAAAAAA</li>
+			</ul>
+		</div>
 	</div>
 </div>
 </body></html>
